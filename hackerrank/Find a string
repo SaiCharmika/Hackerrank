@@ -1,0 +1,19 @@
+def count_substring(string, substring):
+    count = 0
+    start = 0
+    
+    while start < len(string):
+        # Find the substring starting from index 'start'
+        start = string.find(substring, start)
+        
+        # If the substring is found, increment the count
+        if start != -1:
+            count += 1
+            # Move the start index forward by 1 to avoid counting overlapping substrings
+            start += 1
+        else:
+            break
+    
+    return count
+
+if __name__ == '__main__':
