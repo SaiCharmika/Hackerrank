@@ -1,0 +1,25 @@
+if __name__ == '__main__':
+    N = int(input())  # Number of commands
+    lst = []  # Initialize an empty list
+
+    for _ in range(N):
+        # Read the command and arguments
+        command = input().strip().split()
+        operation = command[0]
+        arguments = list(map(int, command[1:]))
+        
+        # Execute the corresponding operation
+        if operation == "insert":
+            lst.insert(arguments[0], arguments[1])
+        elif operation == "print":
+            print(lst)
+        elif operation == "remove":
+            lst.remove(arguments[0])
+        elif operation == "append":
+            lst.append(arguments[0])
+        elif operation == "sort":
+            lst.sort()
+        elif operation == "pop":
+            lst.pop()
+        elif operation == "reverse":
+            lst.reverse(
