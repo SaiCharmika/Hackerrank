@@ -1,0 +1,10 @@
+if __name__ == '__main__':
+    x = int(input())  # First dimension of the cuboid
+    y = int(input())  # Second dimension of the cuboid
+    z = int(input())  # Third dimension of the cuboid
+    k = int(input())  # The integer that the sum of coordinates should not equal
+    
+    # Use list comprehension to generate all valid coordinates
+    result = [[i, j, l] for i in range(x + 1) for j in range(y + 1) for l in range(z + 1) if (i + j + l) != k]
+    
+    print(result)
