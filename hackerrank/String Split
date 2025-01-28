@@ -1,0 +1,9 @@
+def split_and_join(line):
+    # Split the string into a list of words based on space and join using a hyphen
+    return "-".join(line.split(" "))
+
+# Read input string
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
