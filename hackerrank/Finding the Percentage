@@ -1,0 +1,19 @@
+if __name__ == '__main__':
+    n = int(input())  # Number of students
+    student_marks = {}
+
+    for _ in range(n):
+        # Read the input for each student
+        data = input().split()
+        name = data[0]  # Student's name
+        marks = list(map(float, data[1:]))  # Convert scores to floats
+        student_marks[name] = marks
+
+    query_name = input()  # The student name to query
+
+    # Get the marks of the queried student and calculate the average
+    query_marks = student_marks[query_name]
+    average = sum(query_marks) / len(query_marks)
+
+    # Print the average rounded to 2 decimal places
+    print(f"{average:.2f}")
