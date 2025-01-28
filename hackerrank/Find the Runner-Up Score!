@@ -1,0 +1,12 @@
+if __name__ == '__main__':
+    n = int(input())  # Read the number of participants (this value is not used directly)
+    arr = list(map(int, input().split()))  # Read the list of scores into an integer list
+    
+    # Step 1: Convert the list to a set to remove duplicates
+    unique_scores = set(arr)
+    
+    # Step 2: Sort the set in descending order
+    sorted_scores = sorted(unique_scores, reverse=True)
+    
+    # Step 3: The runner-up score is the second item in the sorted list
+    print(sorted_scores[1])
