@@ -1,0 +1,29 @@
+from collections import defaultdict
+
+def find_word_indices(group_a, group_b):
+    # Create a defaultdict to store the indices of each word in group A
+    word_positions = defaultdict(list)
+    
+    # Fill the dictionary with word positions (1-based index)
+    for idx, word in enumerate(group_a, start=1):
+        word_positions[word].append(idx)
+    
+    # For each word in group B, check its occurrence in group A and print indices or -1
+    for word in group_b:
+        if word in word_positions:
+            print(" ".join(map(str, word_positions[word])))
+        else:
+            print(-1)
+
+if __name__ == '__main__':
+    # Read the input sizes
+    n, m = map(int, input().split())
+    
+    # Read the words in group A
+    group_a = [input().strip() for _ in range(n)]
+    
+    # Read the words in group B
+    group_b = [input().strip() for _ in range(m)]
+    
+    # Call the function to find the indices
+    find_word_indices(group_a, group_b)
