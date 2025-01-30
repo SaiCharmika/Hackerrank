@@ -1,0 +1,19 @@
+from collections import namedtuple
+
+# Define the namedtuple type with fields: ID, MARKS, CLASS, NAME
+Student = namedtuple('Student', input().split())
+
+# Read the number of students
+n = int(input())
+
+# Initialize a list to store the marks of all students
+marks = []
+
+# Loop through the input for each student, create namedtuple and append the marks
+for _ in range(n):
+    student_data = input().split()
+    student = Student(*student_data)
+    marks.append(int(student.MARKS))
+
+# Calculate and print the average marks rounded to 2 decimal places
+print(f"{sum(marks)/n:.2f}")
