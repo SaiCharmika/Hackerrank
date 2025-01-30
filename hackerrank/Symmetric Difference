@@ -1,0 +1,13 @@
+# Read input values
+m = int(input())  # Size of set A
+a = set(map(int, input().split()))  # Elements of set A
+
+n = int(input())  # Size of set B
+b = set(map(int, input().split()))  # Elements of set B
+
+# Calculate the symmetric difference between sets a and b
+symmetric_diff = a.symmetric_difference(b)
+
+# Sort the symmetric difference in ascending order and print each element
+for element in sorted(symmetric_diff):
+    print(element)
