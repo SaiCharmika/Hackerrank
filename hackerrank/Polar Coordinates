@@ -1,0 +1,20 @@
+import cmath
+
+# Function to compute the polar coordinates
+def polar_coordinates():
+    # Reading the complex number input
+    z = complex(input().strip())  # Converting input string to a complex number
+    
+    # Calculating modulus (absolute value)
+    modulus = abs(z)
+    
+    # Calculating phase (argument) in radians
+    phase = cmath.phase(z)
+    
+    # Printing the results
+    print(modulus)
+    print(phase)
+
+# Main block to invoke the function
+if __name__ == '__main__':
+    polar_coordinates()
