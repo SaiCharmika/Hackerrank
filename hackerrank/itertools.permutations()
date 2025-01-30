@@ -1,0 +1,16 @@
+from itertools import permutations
+
+def print_permutations():
+    # Read input string and the integer value
+    s, r = input().split()
+    r = int(r)
+    
+    # Generate all permutations of length r
+    perm = permutations(sorted(s), r)
+    
+    # Print each permutation
+    for p in perm:
+        print(''.join(p))
+
+if __name__ == '__main__':
+    print_permutations()
