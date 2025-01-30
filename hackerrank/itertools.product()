@@ -1,0 +1,11 @@
+from itertools import product
+
+# Read input lists
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+# Compute the cartesian product
+result = product(A, B)
+
+# Print the result as space-separated tuples
+print(" ".join(map(str, result)))
