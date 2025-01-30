@@ -1,0 +1,23 @@
+def print_rangoli(size):
+    # Create the alphabet list
+    alphabet = [chr(i) for i in range(97, 97 + size)]
+    
+    # Initialize an empty list to hold each row of the rangoli
+    lines = []
+    
+    # Create the top half of the rangoli (including the middle row)
+    for i in range(size):
+        # Select the letters for the current row
+        row_letters = alphabet[size - 1:size - i - 1:-1] + alphabet[size - i - 1:size]
+        # Create the row with dashes
+        row = "-".join(row_letters)
+        # Center the row to match the total width
+        lines.append(row.center(4 * size - 3, "-"))
+    
+    # Create the full rangoli by appending the reversed top half (excluding the middle row)
+    rangoli = "\n".join(lines + lines[-2::-1])
+    print(rangoli)
+
+if __name__ == '__main__':
+    n = int(input())
+    print_rangoli(n)
