@@ -1,0 +1,32 @@
+from collections import Counter
+
+def shoe_shop_profit():
+    # Input the number of shoes
+    n = int(input())
+    
+    # Input the shoe sizes available in the shop
+    shoe_sizes = list(map(int, input().split()))
+    
+    # Create a counter for shoe sizes in the shop
+    shoe_counter = Counter(shoe_sizes)
+    
+    # Input the number of customers
+    customers = int(input())
+    
+    total_profit = 0
+    
+    # Process each customer's request
+    for _ in range(customers):
+        size, price = map(int, input().split())
+        
+        # Check if the desired shoe size is available
+        if shoe_counter[size] > 0:
+            # Sell the shoe, update the counter and add to profit
+            shoe_counter[size] -= 1
+            total_profit += price
+    
+    # Output the total profit earned
+    print(total_profit)
+
+if __name__ == "__main__":
+    shoe_shop_profit()
