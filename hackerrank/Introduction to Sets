@@ -1,0 +1,17 @@
+def average(array):
+    # Convert the list into a set to remove duplicates
+    distinct_heights = set(array)
+    
+    # Calculate the sum of distinct heights and divide by the number of distinct heights
+    avg = sum(distinct_heights) / len(distinct_heights)
+    
+    # Return the average rounded to 3 decimal places
+    return round(avg, 3)
+
+if __name__ == '__main__':
+    # Read input
+    n = int(input())  # size of the list (not used explicitly)
+    arr = list(map(int, input().split()))  # list of plant heights
+    
+    # Call the average function and print the result
+    print(average(arr))
