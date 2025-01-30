@@ -1,0 +1,13 @@
+import calendar
+
+# Read the input
+month, day, year = map(int, input().split())
+
+# Get the weekday number (0 = Monday, 6 = Sunday)
+weekday_num = calendar.weekday(year, month, day)
+
+# List of days in the week
+days = ["MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY", "SATURDAY", "SUNDAY"]
+
+# Output the day corresponding to the weekday number
+print(days[weekday_num])
