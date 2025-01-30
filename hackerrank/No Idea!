@@ -1,0 +1,18 @@
+# Function to calculate final happiness
+def calculate_happiness(n, m, arr, like_set, dislike_set):
+    happiness = 0
+    for num in arr:
+        if num in like_set:
+            happiness += 1
+        elif num in dislike_set:
+            happiness -= 1
+    return happiness
+
+# Read input values
+n, m = map(int, input().split())  # Read n (size of array) and m (size of sets)
+arr = list(map(int, input().split()))  # Read the array of integers
+like_set = set(map(int, input().split()))  # Read the "like" set
+dislike_set = set(map(int, input().split()))  # Read the "dislike" set
+
+# Calculate and print the final happiness
+print(calculate_happiness(n, m, arr, like_set, dislike_set))
