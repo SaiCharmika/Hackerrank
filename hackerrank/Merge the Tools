@@ -1,0 +1,14 @@
+def merge_the_tools(string, k):
+    # your code goes here
+    # Split the string into n/k substrings of length k
+    for i in range(0, len(string), k):
+        substring = string[i:i+k]
+        # Remove duplicate characters while maintaining order
+        unique_substring = ''.join(dict.fromkeys(substring))
+        print(unique_substring)
+
+
+
+if __name__ == '__main__':
+    string, k = input(), int(input())
+    merge_the_tools(string, k)
