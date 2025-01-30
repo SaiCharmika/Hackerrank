@@ -1,0 +1,20 @@
+# Number of test cases
+t = int(input())
+
+# Loop through each test case
+for _ in range(t):
+    try:
+        # Read two space-separated values
+        x, y = input().split()
+        
+        # Try converting the inputs to integers and perform integer division
+        result = int(x) // int(y)
+        
+        # If no exception occurs, print the result
+        print(result)
+    
+    except ZeroDivisionError as e:
+        print(f"Error Code: {e}")
+    
+    except ValueError as e:
+        print(f"Error Code: {e}")
