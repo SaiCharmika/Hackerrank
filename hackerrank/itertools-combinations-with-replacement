@@ -1,0 +1,9 @@
+from itertools import combinations_with_replacement
+
+# Read input
+s, r = input().split()
+r = int(r)
+
+# Generate and print combinations
+for comb in combinations_with_replacement(sorted(s), r):
+    print(''.join(comb))
