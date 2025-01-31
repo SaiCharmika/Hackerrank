@@ -1,0 +1,21 @@
+from collections import deque
+
+# Read the number of operations
+n = int(input())  # Number of operations
+d = deque()  # Initialize an empty deque
+
+# Execute the operations
+for _ in range(n):
+    operation = input().split()  # Read the operation and its argument (if any)
+    
+    if operation[0] == "append":
+        d.append(int(operation[1]))  # Append to the right end
+    elif operation[0] == "appendleft":
+        d.appendleft(int(operation[1]))  # Append to the left end
+    elif operation[0] == "pop":
+        d.pop()  # Pop from the right end
+    elif operation[0] == "popleft":
+        d.popleft()  # Pop from the left end
+
+# Print the deque elements as space-separated values
+print(*d)
