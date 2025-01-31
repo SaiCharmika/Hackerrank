@@ -1,0 +1,15 @@
+import re
+
+# Number of test cases
+n = int(input())  
+
+# Loop through each test case
+for _ in range(n):
+    regex_string = input().strip()
+    try:
+        # Try to compile the regex
+        re.compile(regex_string)
+        print("True")
+    except re.error:
+        # If there is a compilation error, it's not a valid regex
+        print("False")
