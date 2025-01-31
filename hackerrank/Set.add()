@@ -1,0 +1,13 @@
+# Number of country stamps
+n = int(input())  
+
+# Create an empty set to store distinct countries
+country_stamps = set()
+
+# Loop through each country stamp and add to the set
+for _ in range(n):
+    country = input().strip()
+    country_stamps.add(country)
+
+# Output the total number of distinct country stamps
+print(len(country_stamps))
