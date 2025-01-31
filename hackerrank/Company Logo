@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+from collections import Counter
+
+if __name__ == '__main__':
+    # Reading the input string
+    s = input().strip()
+
+    # Count the frequency of each character in the string
+    counter = Counter(s)
+
+    # Sort the characters by frequency (descending), and by character (ascending) in case of ties
+    sorted_characters = sorted(counter.items(), key=lambda x: (-x[1], x[0]))
+
+    # Print the top three characters with their counts
+    for i in range(3):
+        print(sorted_characters[i][0], sorted_characters[i][1])
