@@ -1,0 +1,27 @@
+from collections import OrderedDict
+
+# Read the number of items
+n = int(input())
+
+# Create an ordered dictionary to store item names and their net prices
+items = OrderedDict()
+
+# Read the input for each item
+for _ in range(n):
+    # Split the input into parts
+    parts = input().split()
+    
+    # The last part is the price, the rest is the item name
+    item_name = " ".join(parts[:-1])  # Join all parts except the last one as item name
+    price = int(parts[-1])  # The last part is the price
+    
+    # If the item is already in the dictionary, update its net price
+    if item_name in items:
+        items[item_name] += price
+    else:
+        # If it's the first occurrence of the item, add it to the dictionary
+        items[item_name] = price
+
+# Print the item names and their net prices in order of first occurrence
+for item_name, net_price in items.items():
+    print(f"{item_name} {net_price}")
