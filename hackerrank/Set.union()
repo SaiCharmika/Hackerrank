@@ -1,0 +1,17 @@
+# Read the number of students who subscribed to the English newspaper
+n_english = int(input())
+
+# Read the roll numbers of students who subscribed to the English newspaper
+english_students = set(map(int, input().split()))
+
+# Read the number of students who subscribed to the French newspaper
+n_french = int(input())
+
+# Read the roll numbers of students who subscribed to the French newspaper
+french_students = set(map(int, input().split()))
+
+# Find the union of the two sets (students who subscribed to at least one newspaper)
+subscribed_students = english_students.union(french_students)
+
+# Print the total number of unique students who have at least one subscription
+print(len(subscribed_students))
