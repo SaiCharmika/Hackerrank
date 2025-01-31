@@ -1,0 +1,17 @@
+import math
+
+# Reading the lengths of the two sides
+a = int(input())  # Length of side a
+b = int(input())  # Length of side b
+
+# Calculate the angle in radians using atan
+angle_radians = math.atan(a / b)
+
+# Convert the angle to degrees
+angle_degrees = math.degrees(angle_radians)
+
+# Round the result to the nearest integer
+result = round(angle_degrees)
+
+# Output the result with the degree symbol using Unicode
+print(f"{result}\u00b0")
