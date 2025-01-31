@@ -1,0 +1,10 @@
+from itertools import groupby
+
+# Read the input string
+s = input().strip()
+
+# Use groupby to group consecutive characters and count their occurrences
+result = [(len(list(group)), key) for key, group in groupby(s)]
+
+# Print the result in the required format
+print(*[f"({count}, {char})" for count, char in result])
