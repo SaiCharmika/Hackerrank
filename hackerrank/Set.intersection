@@ -1,0 +1,10 @@
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+# Read inputs
+n = int(input())  # Number of students subscribed to English newspaper
+english = set(map(int, input().split()))  # English newspaper subscribers
+m = int(input())  # Number of students subscribed to French newspaper
+french = set(map(int, input().split()))  # French newspaper subscribers
+
+# Find the intersection of both sets and print its length
+print(len(english.intersection(french)))
