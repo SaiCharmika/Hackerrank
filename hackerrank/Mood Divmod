@@ -1,0 +1,12 @@
+# Read input from STDIN
+a = int(input())
+b = int(input())
+
+# Print integer division
+print(a // b)
+
+# Print modulo result
+print(a % b)
+
+# Print divmod result
+print(divmod(a, b))
