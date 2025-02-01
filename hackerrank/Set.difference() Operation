@@ -1,0 +1,12 @@
+# Read input values
+n = int(input())  # Number of students subscribed to English newspaper
+english_subscribers = set(map(int, input().split()))  # English newspaper subscribers
+
+m = int(input())  # Number of students subscribed to French newspaper
+french_subscribers = set(map(int, input().split()))  # French newspaper subscribers
+
+# Find students who subscribed only to English newspapers
+only_english = english_subscribers.difference(french_subscribers)
+
+# Output the count of students with only English subscription
+print(len(only_english))
