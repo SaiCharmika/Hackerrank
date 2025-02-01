@@ -1,0 +1,16 @@
+from itertools import product
+
+# Read input values
+K, M = map(int, input().split())
+
+# Read lists and store them
+lists = [list(map(int, input().split()))[1:] for _ in range(K)]
+
+# Generate all possible combinations using itertools.product
+max_value = 0
+for combination in product(*lists):
+    current_value = sum(x**2 for x in combination) % M
+    max_value = max(max_value, current_value)
+
+# Output the maximum possible value
+print(max_value)
