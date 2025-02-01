@@ -1,0 +1,10 @@
+# Read input values from STDIN
+a = int(input())
+b = int(input())
+m = int(input())
+
+# Print the result of pow(a, b)
+print(pow(a, b))
+
+# Print the result of pow(a, b, m))
+print(pow(a, b, m))
