@@ -1,0 +1,13 @@
+from collections import Counter
+
+k = int(input())  # The size of each group
+rooms = list(map(int, input().split()))  # List of room numbers
+
+# Use Counter to count the occurrences of each room number
+room_count = Counter(rooms)
+
+# Find the room number that appears exactly once (Captain's room)
+for room, count in room_count.items():
+    if count == 1:
+        print(room)
+        break
