@@ -1,0 +1,15 @@
+# Read input
+n = int(input())  # Number of elements in set A
+A = set(map(int, input().split()))  # Elements of set A
+
+N = int(input())  # Number of other sets
+
+# Perform operations
+for _ in range(N):
+    operation, _ = input().split()  # Read operation name
+    other_set = set(map(int, input().split()))  # Read other set
+    # Perform the operation dynamically
+    getattr(A, operation)(other_set)  
+
+# Print the sum of elements in A after all operations
+print(sum(A))
