@@ -1,0 +1,11 @@
+# Read four integers from input
+A = int(input())
+B = int(input())
+C = int(input())
+D = int(input())
+
+# Compute the result
+result = pow(A, B) + pow(C, D)
+
+# Print the output
+print(result)
