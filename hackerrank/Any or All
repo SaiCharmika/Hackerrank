@@ -1,0 +1,10 @@
+# Read input
+n = int(input())  # Read the first input (not used in the solution)
+numbers = input().split()  # Read the space-separated numbers as strings
+
+# Check conditions
+all_positive = all(int(i) > 0 for i in numbers)
+has_palindrome = any(i == i[::-1] for i in numbers)
+
+# Print result
+print(all_positive and has_palindrome)
