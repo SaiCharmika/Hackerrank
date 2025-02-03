@@ -1,0 +1,22 @@
+#!/bin/python3
+
+import sys
+
+if __name__ == '__main__':
+    # Read n and m
+    first_multiple_input = input().rstrip().split()
+    n = int(first_multiple_input[0])
+    m = int(first_multiple_input[1])
+
+    # Read the athlete data into a list
+    arr = [list(map(int, input().rstrip().split())) for _ in range(n)]
+
+    # Read the column index to sort by
+    k = int(input().strip())
+
+    # Sort the list based on the k-th column
+    arr.sort(key=lambda x: x[k])
+
+    # Print the sorted list
+    for row in arr:
+        print(*row)
