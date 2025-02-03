@@ -1,0 +1,5 @@
+# Read input expression as a string
+expression = input()
+
+# Evaluate and execute the expression
+eval(expression)
