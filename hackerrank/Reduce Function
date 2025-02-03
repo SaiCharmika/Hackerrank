@@ -1,0 +1,19 @@
+from fractions import Fraction
+from functools import reduce
+
+def product(fracs):
+    # Use reduce to multiply all fractions
+    t = reduce(lambda x, y: x * y, fracs)
+    return t.numerator, t.denominator
+
+if __name__ == '__main__':
+    fracs = []
+    for _ in range(int(input())):
+        # Read each numerator and denominator and convert them to Fraction
+        fracs.append(Fraction(*map(int, input().split())))
+    
+    # Get the result of the product of fractions
+    result = product(fracs)
+    
+    # Print the result (numerator and denominator)
+    print(*result)
