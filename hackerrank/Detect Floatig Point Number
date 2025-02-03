@@ -1,0 +1,9 @@
+import re
+
+# Number of test cases
+n = int(input().strip())
+
+# Process each test case
+for _ in range(n):
+    s = input().strip()
+    print(bool(re.match(r'^[+-]?(\d+|\d*\.\d+)$', s)))
