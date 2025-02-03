@@ -1,0 +1,13 @@
+import re
+
+# Read the input string
+s = input()
+
+# Search for the first alphanumeric character that repeats consecutively
+match = re.search(r'([a-zA-Z0-9])\1', s)
+
+# Check if a match was found
+if match:
+    print(match.group(1))  # Print the repeating character
+else:
+    print(-1)  # Print -1 if no repeating character is found
