@@ -1,0 +1,13 @@
+import re
+
+# Function to validate the email address
+def fun(s):
+    # Updated regex pattern for email validation
+    pattern = r'^[a-zA-Z0-9_-]+@[a-zA-Z0-9]+\.[a-zA-Z]{1,10}$'
+    
+    # Check if the string matches the regex pattern
+    return re.match(pattern, s) is not None
+
+def filter_mail(emails):
+    # Use filter to apply fun function to each email and return the valid ones
+    return list(filter(fun, emails))
