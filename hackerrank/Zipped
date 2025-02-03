@@ -1,0 +1,9 @@
+# Read input
+n, x = map(int, input().split())
+
+# Read subject marks and store in a list
+marks = [list(map(float, input().split())) for _ in range(x)]
+
+# Use zip(*) to transpose and calculate student-wise averages
+for student in zip(*marks):
+    print(f"{sum(student) / x:.1f}")
