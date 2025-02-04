@@ -1,0 +1,18 @@
+import re
+
+# Read number of lines
+n = int(input().strip())
+
+# Process each line
+for _ in range(n):
+    # Read the line of input
+    line = input()
+    
+    # Replace '&&' with 'and' only if they have spaces on both sides
+    line = re.sub(r'(?<= )&&(?= )', 'and', line)
+    
+    # Replace '||' with 'or' only if they have spaces on both sides
+    line = re.sub(r'(?<= )\|\|(?= )', 'or', line)
+    
+    # Print the modified line
+    print(line)
