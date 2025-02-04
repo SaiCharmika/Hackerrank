@@ -1,0 +1,11 @@
+import re
+
+# Read the number of inputs
+n = int(input())
+
+# Define the regex pattern for a valid mobile number
+pattern = r"^[789]\d{9}$"
+
+# Check each input against the pattern
+for _ in range(n):
+    print("YES" if re.match(pattern, input()) else "NO")
