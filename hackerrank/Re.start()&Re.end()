@@ -1,0 +1,15 @@
+import re
+
+# Read input
+s = input().strip()
+k = input().strip()
+
+# Find all matches using re.finditer()
+matches = list(re.finditer(f'(?={re.escape(k)})', s))
+
+# Print results
+if matches:
+    for match in matches:
+        print((match.start(), match.start() + len(k) - 1))
+else:
+    print((-1, -1))
