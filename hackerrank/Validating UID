@@ -1,0 +1,32 @@
+import re
+
+def is_valid_uid(uid):
+    # Rule 1: Must be exactly 10 characters long
+    if len(uid) != 10:
+        return "Invalid"
+
+    # Rule 2: Must contain at least 2 uppercase English letters (A-Z)
+    if len(re.findall(r'[A-Z]', uid)) < 2:
+        return "Invalid"
+
+    # Rule 3: Must contain at least 3 digits (0-9)
+    if len(re.findall(r'\d', uid)) < 3:
+        return "Invalid"
+
+    # Rule 4: Should only contain alphanumeric characters
+    if not uid.isalnum():
+        return "Invalid"
+
+    # Rule 5: No character should repeat
+    if len(set(uid)) != 10:
+        return "Invalid"
+
+    return "Valid"
+
+# Read number of test cases
+t = int(input().strip())
+
+# Process each UID
+for _ in range(t):
+    uid = input().strip()
+    print(is_valid_uid(uid))
