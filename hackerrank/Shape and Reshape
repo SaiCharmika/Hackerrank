@@ -1,0 +1,10 @@
+import numpy
+
+# Read input, convert to list of integers
+arr = list(map(int, input().strip().split()))
+
+# Convert list to NumPy array and reshape to 3x3
+reshaped_array = numpy.array(arr).reshape(3, 3)
+
+# Print the reshaped NumPy array
+print(reshaped_array)
