@@ -1,0 +1,19 @@
+def score_words(words):
+    vowels = {'a', 'e', 'i', 'o', 'u', 'y'}  # Define vowels as a set
+    score = 0
+
+    for word in words:
+        vowel_count = sum(1 for letter in word if letter in vowels)  # Count vowels in each word
+        if vowel_count % 2 == 0:  # Even number of vowels
+            score += 2
+        else:  # Odd number of vowels
+            score += 1
+
+    return score
+
+# Read input
+n = int(input().strip())  # Read number of words
+words = input().strip().split()  # Read words as a list
+
+# Print the final score
+print(score_words(words))
