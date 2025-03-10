@@ -1,0 +1,16 @@
+import numpy as np
+
+# Read input values
+n, m = map(int, input().split())
+
+# Read arrays
+A = np.array([list(map(int, input().split())) for _ in range(n)])
+B = np.array([list(map(int, input().split())) for _ in range(n)])
+
+# Perform operations
+print(A + B)         # Addition
+print(A - B)         # Subtraction
+print(A * B)         # Multiplication
+print(A // B)        # Integer (floor) division
+print(A % B)         # Modulus
+print(A ** B)        # Power
