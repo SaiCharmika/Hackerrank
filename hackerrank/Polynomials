@@ -1,0 +1,11 @@
+import numpy as np
+
+# Read input
+coefficients = list(map(float, input().split()))  # Read polynomial coefficients
+x = float(input())  # Read the point at which to evaluate
+
+# Compute the polynomial value at x
+result = np.polyval(coefficients, x)
+
+# Print the result
+print(result)
