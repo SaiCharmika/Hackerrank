@@ -1,0 +1,13 @@
+import numpy as np
+
+# Read input
+A = np.array(list(map(int, input().split())))  # Read first array
+B = np.array(list(map(int, input().split())))  # Read second array
+
+# Compute inner and outer products
+inner_product = np.inner(A, B)
+outer_product = np.outer(A, B)
+
+# Print results
+print(inner_product)
+print(outer_product)
