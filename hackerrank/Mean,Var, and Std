@@ -1,0 +1,15 @@
+import numpy as np
+
+# Read input
+N, M = map(int, input().split())  # Read dimensions
+array = np.array([list(map(int, input().split())) for _ in range(N)])
+
+# Compute mean, variance, and standard deviation
+mean = np.mean(array, axis=1)  # Mean along rows
+var = np.var(array, axis=0)    # Variance along columns
+std = np.std(array)            # Standard deviation of the entire array
+
+# Print results with correct formatting
+print(mean)
+print(var)
+print(round(std, 11))  # Round standard deviation to 11 decimal places
