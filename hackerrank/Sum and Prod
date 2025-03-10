@@ -1,0 +1,11 @@
+import numpy as np
+
+# Read input
+N, M = map(int, input().split())  # Read dimensions
+array = np.array([list(map(int, input().split())) for _ in range(N)])
+
+# Compute sum along axis 0, then compute product of the result
+result = np.prod(np.sum(array, axis=0))
+
+# Print result
+print(result)
