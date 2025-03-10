@@ -1,0 +1,16 @@
+import numpy as np
+
+# Read the first line to get n, m, p
+n, m, p = map(int, input().split())
+
+# Read first n rows into array_1
+array_1 = np.array([list(map(int, input().split())) for _ in range(n)])
+
+# Read next m rows into array_2
+array_2 = np.array([list(map(int, input().split())) for _ in range(m)])
+
+# Concatenate along axis 0 (vertically)
+result = np.concatenate((array_1, array_2), axis=0)
+
+# Print the result
+print(result)
