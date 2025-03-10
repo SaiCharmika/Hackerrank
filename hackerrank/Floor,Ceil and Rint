@@ -1,0 +1,12 @@
+import numpy as np
+
+# Set print options to match HackerRank's expected output
+np.set_printoptions(legacy='1.13')
+
+# Read input and convert to NumPy array
+A = np.array(input().split(), dtype=float)
+
+# Perform operations and print results
+print(np.floor(A))
+print(np.ceil(A))
+print(np.rint(A))
